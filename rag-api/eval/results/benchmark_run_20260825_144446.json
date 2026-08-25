@@ -1,0 +1,1228 @@
+{
+  "metadata": {
+    "timestamp": "20260825_144446",
+    "total_queries": 50,
+    "overall_vector_accuracy": 8.0,
+    "overall_hybrid_accuracy": 12.0,
+    "llm_provider": "groq",
+    "llm_model": "openai/gpt-oss-120b",
+    "vector_store": "FAISS (all-MiniLM-L6-v2)",
+    "graph_store": "Neo4j 5.x"
+  },
+  "summary_by_category": {
+    "single-hop": {
+      "total": 12,
+      "vector_correct": 4,
+      "vector_accuracy": 33.33,
+      "hybrid_correct": 5,
+      "hybrid_accuracy": 41.67,
+      "delta": 8.33
+    },
+    "two-hop": {
+      "total": 12,
+      "vector_correct": 0,
+      "vector_accuracy": 0.0,
+      "hybrid_correct": 1,
+      "hybrid_accuracy": 8.33,
+      "delta": 8.33
+    },
+    "three-hop": {
+      "total": 8,
+      "vector_correct": 0,
+      "vector_accuracy": 0.0,
+      "hybrid_correct": 0,
+      "hybrid_accuracy": 0.0,
+      "delta": 0.0
+    },
+    "aggregation": {
+      "total": 10,
+      "vector_correct": 0,
+      "vector_accuracy": 0.0,
+      "hybrid_correct": 0,
+      "hybrid_accuracy": 0.0,
+      "delta": 0.0
+    },
+    "out-of-scope": {
+      "total": 8,
+      "vector_correct": 0,
+      "vector_accuracy": 0.0,
+      "hybrid_correct": 0,
+      "hybrid_accuracy": 0.0,
+      "delta": 0.0
+    }
+  },
+  "latency_stats": {
+    "vector": {
+      "p50_ms": 468.44,
+      "p95_ms": 11618.02,
+      "mean_ms": 6729.93
+    },
+    "hybrid": {
+      "p50_ms": 628.93,
+      "p95_ms": 14128.96,
+      "mean_ms": 18664.55
+    }
+  },
+  "detailed_results": [
+    {
+      "id": 1,
+      "category": "single-hop",
+      "question": "What is the total revenue reported by Tesla for FY 2025?",
+      "expected_keywords": [
+        "94,827",
+        "94.8",
+        "revenue"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 2701.25,
+        "answer_snippet": "I could not find a direct answer in the provided document.  \n[Source: tsla-q4-2025-update_chunk_15]",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 1467.21,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 2,
+      "category": "single-hop",
+      "question": "Who serves as the Chief Executive Officer (CEO) of Tesla?",
+      "expected_keywords": [
+        "Elon Musk",
+        "CEO"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 750.95,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 1606.6,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 3,
+      "category": "single-hop",
+      "question": "Where is Tesla's corporate headquarters located?",
+      "expected_keywords": [
+        "Austin",
+        "Texas"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 8044.39,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 12101.75,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 4,
+      "category": "single-hop",
+      "question": "What was Tesla's GAAP Operating Income reported for 2025?",
+      "expected_keywords": [
+        "4.4",
+        "4,400",
+        "Operating Income"
+      ],
+      "vector_eval": {
+        "passed": true,
+        "latency_ms": 9154.82,
+        "answer_snippet": "I could not find a direct answer in the provided document.  \n\n**Source:** The excerpts only discuss the nature of GAAP vs. non\u2011GAAP information and forward\u2011looking statements, without providing any sp",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": true,
+        "route_taken": "vector",
+        "latency_ms": 11495.19,
+        "answer_snippet": "**Answer:**  \nI could not find a direct answer in the provided document.  \n\n**Source:**  \n- The excerpts from the Tesla Q4 2025 update discuss GAAP vs. non\u2011GAAP information and forward\u2011looking stateme",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 5,
+      "category": "single-hop",
+      "question": "Where is Microsoft Corporation headquartered?",
+      "expected_keywords": [
+        "Redmond",
+        "Washington"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 10979.78,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 13308.88,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 6,
+      "category": "single-hop",
+      "question": "Who is the CEO of Apple Inc.?",
+      "expected_keywords": [
+        "Tim Cook",
+        "CEO"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 12030.54,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 11530.69,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 7,
+      "category": "single-hop",
+      "question": "What is the primary regulatory agency overseeing Microsoft's SEC filings?",
+      "expected_keywords": [
+        "SEC",
+        "Securities",
+        "Exchange Commission"
+      ],
+      "vector_eval": {
+        "passed": true,
+        "latency_ms": 11385.91,
+        "answer_snippet": "**Primary regulatory agency:**\u202fU.S. **Securities and Exchange Commission (SEC)**  \n\n- The filing header lists \u201cSECURITIES AND EXCHANGE COMMISSION\u201d as the agency receiving the Form\u202f10\u2011K.\u202f[Source: msft_",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": true,
+        "route_taken": "vector",
+        "latency_ms": 15476.52,
+        "answer_snippet": "**Primary regulatory agency overseeing Microsoft\u2019s SEC filings:**  \n- **U.S. Securities and Exchange Commission (SEC)** \u2013 the agency to which Microsoft submits its Form\u202f10\u2011K and other required reports",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 8,
+      "category": "single-hop",
+      "question": "What humanoid robot product is Tesla developing according to the update?",
+      "expected_keywords": [
+        "Optimus",
+        "robot"
+      ],
+      "vector_eval": {
+        "passed": true,
+        "latency_ms": 9817.65,
+        "answer_snippet": "**Humanoid robot product:** **Optimus** (referred to as the \u201cproduction\u2011primed Optimus design\u201d)\u3010Source: tsla-q4-2025-update_chunk_1\u3011",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": true,
+        "route_taken": "vector",
+        "latency_ms": 6838.94,
+        "answer_snippet": "**Humanoid robot product being developed:** **Optimus** (referred to as the \u201cproduction\u2011primed Optimus design\u201d)\u3010Source: tsla-q4-2025-update_chunk_1\u3011",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 9,
+      "category": "single-hop",
+      "question": "What autonomous vehicle vehicle model was announced for unsupervised ride-hailing?",
+      "expected_keywords": [
+        "Cybercab",
+        "Robotaxi"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 9836.08,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 11352.66,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 10,
+      "category": "single-hop",
+      "question": "Is Beats Electronics a subsidiary of Apple?",
+      "expected_keywords": [
+        "Beats",
+        "subsidiary",
+        "Apple"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 7090.7,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": true,
+        "route_taken": "graph",
+        "latency_ms": 10622.28,
+        "answer_snippet": "**Answer:** Yes, Beats Electronics is a subsidiary of Apple.\n\n**Source:**  \n- Knowledge Graph relationship: `Beats Electronics -[SUBSIDIARY_OF]-> Apple` (Verified via Knowledge Graph)",
+        "sources_count": 10
+      }
+    },
+    {
+      "id": 11,
+      "category": "single-hop",
+      "question": "What company operates as a major hardware contract manufacturer supplying Apple?",
+      "expected_keywords": [
+        "Foxconn",
+        "supplier"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 3835.92,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 10278.88,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 12,
+      "category": "single-hop",
+      "question": "What software suite powers Tesla's autonomous driver assistance system?",
+      "expected_keywords": [
+        "FSD",
+        "Full Self-Driving",
+        "Supervised"
+      ],
+      "vector_eval": {
+        "passed": true,
+        "latency_ms": 11807.92,
+        "answer_snippet": "**Answer:**  \nTesla\u2019s autonomous driver\u2011assistance system is powered by the **Full Self\u2011Driving (FSD) software suite**.\n\n**Source**  \n- The Q4\u202f2025 update references \u201cFSD Miles on V12 and Beyond\u201d and ",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": true,
+        "route_taken": "vector",
+        "latency_ms": 14799.94,
+        "answer_snippet": "**Answer:** Tesla\u2019s autonomous driver\u2011assistance system is powered by the **Full Self\u2011Driving (FSD) software suite**.\n\n**Source:**  \n- Mention of \u201cFSD Miles on V12 and Beyond\u201d and \u201cFSD Miles on V11 an",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 13,
+      "category": "two-hop",
+      "question": "Who is the Chief Executive of the company that produces the Cybercab and Optimus robot?",
+      "expected_keywords": [
+        "Elon Musk",
+        "Tesla"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 9150.1,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "graph",
+        "latency_ms": 11566.02,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 2
+      }
+    },
+    {
+      "id": 14,
+      "category": "two-hop",
+      "question": "In what city is the corporate headquarters of the company led by Elon Musk?",
+      "expected_keywords": [
+        "Austin",
+        "Texas",
+        "Tesla"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 4430.62,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 10264.18,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 15,
+      "category": "two-hop",
+      "question": "Who leads the technology company that owns Beats Electronics as a subsidiary?",
+      "expected_keywords": [
+        "Tim Cook",
+        "Apple"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 588.86,
+        "answer_snippet": "I could not find a direct answer in the provided document.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": true,
+        "route_taken": "graph",
+        "latency_ms": 8138.85,
+        "answer_snippet": "**Answer:** Tim\u202fCook leads Apple, the technology company that owns Beats\u202fElectronics as a subsidiary.\n\n**Source:**  \n- (Verified via Knowledge Graph: Apple\u202f\u2192\u202fLED_BY\u202f\u2192\u202fTim\u202fCook)",
+        "sources_count": 10
+      }
+    },
+    {
+      "id": 16,
+      "category": "two-hop",
+      "question": "Which hardware manufacturing partner supplies assembled devices to the company led by Tim Cook?",
+      "expected_keywords": [
+        "Foxconn",
+        "Apple"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 205364.93,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Connection error.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "graph",
+        "latency_ms": 3817.72,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Connection error.",
+        "sources_count": 1
+      }
+    },
+    {
+      "id": 17,
+      "category": "two-hop",
+      "question": "What regulatory body has jurisdiction over the company headquartered in Redmond, Washington?",
+      "expected_keywords": [
+        "SEC",
+        "Securities",
+        "Microsoft"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 2540.43,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Connection error.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 755553.32,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Connection error.",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 18,
+      "category": "two-hop",
+      "question": "What vehicle products are manufactured by the company headquartered in Austin, Texas?",
+      "expected_keywords": [
+        "Model Y",
+        "Model 3",
+        "Cybercab",
+        "Tesla"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 4443.26,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Connection error.",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 5419.98,
+        "answer_snippet": "**Vehicle products manufactured**\n\n- **Electric vehicles** \u2013 the company\u2019s manufacturing focus includes \u201celectric vehicles\u201d as a core product line\u3010Source: tsla-q4-2025-update_chunk_60\u3011.",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 19,
+      "category": "two-hop",
+      "question": "What is the reported full-year revenue of the company that produces the Model Y and Cybercab?",
+      "expected_keywords": [
+        "94,827",
+        "94.8",
+        "Tesla",
+        "revenue"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 1154.3,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 3872.54,
+        "answer_snippet": "**Full\u2011year revenue (2025, unaudited)**  \n- **$24,901\u202fmillion** (\u2248\u202f$24.9\u202fbillion)  \n\n**Source**: Total revenues for Q4\u20112025 are listed as $24,901\u202fmillion in the financial summary table\u3010Source: tsla-q4",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 20,
+      "category": "two-hop",
+      "question": "What operating income was generated in 2025 by the automotive company led by Elon Musk?",
+      "expected_keywords": [
+        "4.4",
+        "4,400",
+        "Tesla",
+        "Operating Income"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 2007.37,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 980.21,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 21,
+      "category": "two-hop",
+      "question": "Which subsidiary brand acquired by Apple operates in the consumer audio hardware sector?",
+      "expected_keywords": [
+        "Beats",
+        "Electronics",
+        "Apple"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 766.16,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "both",
+        "latency_ms": 883.59,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 11
+      }
+    },
+    {
+      "id": 22,
+      "category": "two-hop",
+      "question": "What energy storage hardware deployment milestones were reported by the maker of Megapack?",
+      "expected_keywords": [
+        "Megapack",
+        "energy",
+        "storage",
+        "deployment"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 675.83,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 488.37,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 23,
+      "category": "two-hop",
+      "question": "What capital expenditure metrics were reported for the producer of the Optimus robot?",
+      "expected_keywords": [
+        "Capital expenditures",
+        "investments",
+        "Tesla"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 456.21,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 577.19,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 24,
+      "category": "two-hop",
+      "question": "Does Foxconn provide contract manufacturing to the parent company of Beats Electronics?",
+      "expected_keywords": [
+        "Foxconn",
+        "Apple",
+        "Beats"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 383.04,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "graph",
+        "latency_ms": 353.57,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 3
+      }
+    },
+    {
+      "id": 25,
+      "category": "three-hop",
+      "question": "Trace the relationship between Foxconn, the parent company of Beats Electronics, and its Chief Executive.",
+      "expected_keywords": [
+        "Foxconn",
+        "Apple",
+        "Tim Cook",
+        "Beats"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 440.54,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "graph",
+        "latency_ms": 1733.63,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 3
+      }
+    },
+    {
+      "id": 26,
+      "category": "three-hop",
+      "question": "What is the corporate hierarchy linking audio subsidiary Beats Electronics to its contract manufacturing supply chain via Apple?",
+      "expected_keywords": [
+        "Beats",
+        "Apple",
+        "Foxconn",
+        "subsidiary"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 309.35,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "both",
+        "latency_ms": 277.06,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 14
+      }
+    },
+    {
+      "id": 27,
+      "category": "three-hop",
+      "question": "How does the executive leadership of Tesla connect to its Austin headquarters and its autonomous Cybercab product line?",
+      "expected_keywords": [
+        "Elon Musk",
+        "Tesla",
+        "Austin",
+        "Cybercab"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 180.7,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "graph",
+        "latency_ms": 942.67,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 13
+      }
+    },
+    {
+      "id": 28,
+      "category": "three-hop",
+      "question": "What financial revenue was generated by the corporation whose CEO oversees both the Optimus robot and Texas Gigafactory operations?",
+      "expected_keywords": [
+        "94,827",
+        "94.8",
+        "Elon Musk",
+        "Tesla",
+        "revenue"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 245.61,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "both",
+        "latency_ms": 255.04,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 5
+      }
+    },
+    {
+      "id": 29,
+      "category": "three-hop",
+      "question": "Can you trace the governance link from the Securities and Exchange Commission to Microsoft's corporate seat in Redmond?",
+      "expected_keywords": [
+        "SEC",
+        "Microsoft",
+        "Redmond",
+        "REGULATED_BY"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 175.64,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 242.71,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 30,
+      "category": "three-hop",
+      "question": "If component supply disruptions occur at Foxconn, which subsidiary brands and executive leadership under Apple are exposed?",
+      "expected_keywords": [
+        "Foxconn",
+        "Apple",
+        "Beats",
+        "Tim Cook"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 319.5,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "graph",
+        "latency_ms": 387.33,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 10
+      }
+    },
+    {
+      "id": 31,
+      "category": "three-hop",
+      "question": "What cash and investment reserves are held by the company whose Austin headquarters oversees the rollout of unsupervised FSD and Cybercab fleets?",
+      "expected_keywords": [
+        "Cash",
+        "investments",
+        "Tesla",
+        "Austin",
+        "FSD"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 292.78,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 412.03,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 32,
+      "category": "three-hop",
+      "question": "How do regulatory filings required by the SEC connect to the GAAP operating income disclosures of technology companies in Redmond and Austin?",
+      "expected_keywords": [
+        "SEC",
+        "Microsoft",
+        "Tesla",
+        "GAAP"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 396.43,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 486.9,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 33,
+      "category": "aggregation",
+      "question": "List all major automotive and robotics products developed by Tesla mentioned in the update.",
+      "expected_keywords": [
+        "Model Y",
+        "Model 3",
+        "Cybercab",
+        "Optimus",
+        "Robotaxi"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 483.78,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 680.67,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 34,
+      "category": "aggregation",
+      "question": "How many distinct companies and corporate subsidiaries are mapped across the entire database?",
+      "expected_keywords": [
+        "Tesla",
+        "Apple",
+        "Microsoft",
+        "Beats",
+        "Foxconn"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 483.22,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "both",
+        "latency_ms": 493.63,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 35,
+      "category": "aggregation",
+      "question": "What is the breakdown of GAAP financial metrics reported in the Tesla financial update?",
+      "expected_keywords": [
+        "revenue",
+        "Operating Income",
+        "Net Income",
+        "Free cash flow"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 384.35,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 687.08,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 36,
+      "category": "aggregation",
+      "question": "Identify all Chief Executive Officers (CEOs) tracked across all companies in the system.",
+      "expected_keywords": [
+        "Elon Musk",
+        "Tim Cook"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 480.67,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "graph",
+        "latency_ms": 337.23,
+        "answer_snippet": "No relevant documents or graph relationships found. Please upload a financial PDF document first.",
+        "sources_count": 0
+      }
+    },
+    {
+      "id": 37,
+      "category": "aggregation",
+      "question": "List all corporate headquarters locations mapped across all entities in the knowledge graph.",
+      "expected_keywords": [
+        "Austin",
+        "Redmond"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 344.98,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 479.9,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 38,
+      "category": "aggregation",
+      "question": "What primary cash flow metrics including operating cash flow, capital expenditures, and free cash flow were disclosed?",
+      "expected_keywords": [
+        "operating activities",
+        "Capital expenditures",
+        "Free cash flow"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 388.43,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 390.04,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 39,
+      "category": "aggregation",
+      "question": "Summarize all supply chain relationships and subsidiary ownership structures recorded in the graph.",
+      "expected_keywords": [
+        "SUPPLIES_TO",
+        "SUBSIDIARY_OF",
+        "Foxconn",
+        "Beats",
+        "Apple"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 294.0,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "graph",
+        "latency_ms": 235.22,
+        "answer_snippet": "No relevant documents or graph relationships found. Please upload a financial PDF document first.",
+        "sources_count": 0
+      }
+    },
+    {
+      "id": 40,
+      "category": "aggregation",
+      "question": "What next-generation technology platforms including FSD, Cybercab, and Optimus are highlighted for future growth?",
+      "expected_keywords": [
+        "FSD",
+        "Cybercab",
+        "Optimus",
+        "autonomous"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 224.25,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 338.85,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 41,
+      "category": "aggregation",
+      "question": "List all financial metrics that carry GAAP designation in the filing.",
+      "expected_keywords": [
+        "GAAP",
+        "Operating Income",
+        "Net income"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 214.85,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 256.5,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 42,
+      "category": "aggregation",
+      "question": "What regulatory compliance bodies and standards govern the companies tracked in this database?",
+      "expected_keywords": [
+        "SEC",
+        "Securities",
+        "REGULATED_BY"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 215.75,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 214.02,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 43,
+      "category": "out-of-scope",
+      "question": "What is the current weather forecast for Tokyo tomorrow morning?",
+      "expected_keywords": [
+        "could not find",
+        "not found",
+        "document"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 149.27,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 234.53,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 44,
+      "category": "out-of-scope",
+      "question": "Who won the ICC Cricket World Cup final in 2023?",
+      "expected_keywords": [
+        "could not find",
+        "not found",
+        "document"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 217.74,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 209.77,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 45,
+      "category": "out-of-scope",
+      "question": "What is the recipe for preparing authentic Italian lasagna from scratch?",
+      "expected_keywords": [
+        "could not find",
+        "not found",
+        "document"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 168.54,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 213.05,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 46,
+      "category": "out-of-scope",
+      "question": "What are the cheat codes for Grand Theft Auto V on PlayStation 5?",
+      "expected_keywords": [
+        "could not find",
+        "not found",
+        "document"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 142.06,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 193.5,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 47,
+      "category": "out-of-scope",
+      "question": "Who directed the movie Oppenheimer released in 2023?",
+      "expected_keywords": [
+        "could not find",
+        "not found",
+        "document"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 137.96,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 188.85,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 48,
+      "category": "out-of-scope",
+      "question": "What is the distance between the Earth and the Moon in miles?",
+      "expected_keywords": [
+        "could not find",
+        "not found",
+        "document"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 132.27,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 186.35,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 49,
+      "category": "out-of-scope",
+      "question": "How do you solve a quadratic equation using the quadratic formula?",
+      "expected_keywords": [
+        "could not find",
+        "not found",
+        "document"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 136.33,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 175.32,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    },
+    {
+      "id": 50,
+      "category": "out-of-scope",
+      "question": "Who won the best actor award at the Academy Awards in 2024?",
+      "expected_keywords": [
+        "could not find",
+        "not found",
+        "document"
+      ],
+      "vector_eval": {
+        "passed": false,
+        "latency_ms": 140.62,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      },
+      "hybrid_eval": {
+        "passed": false,
+        "route_taken": "vector",
+        "latency_ms": 180.56,
+        "answer_snippet": "An error occurred while generating the answer via LLM: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0v1zgdxeatbqry0tgh50jkt` serv",
+        "sources_count": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "category": "single-hop",
+    "question": "What is the total revenue reported by Tesla for FY 2025?",
+    "expected_answer_keywords": ["94,827", "94.8", "revenue"],
+    "target_route": "vector"
+  },
+  {
+    "id": 2,
+    "category": "single-hop",
+    "question": "Who serves as the Chief Executive Officer (CEO) of Tesla?",
+    "expected_answer_keywords": ["Elon Musk", "CEO"],
+    "target_route": "graph"
+  },
+  {
+    "id": 3,
+    "category": "single-hop",
+    "question": "Where is Tesla's corporate headquarters located?",
+    "expected_answer_keywords": ["Austin", "Texas"],
+    "target_route": "graph"
+  },
+  {
+    "id": 4,
+    "category": "single-hop",
+    "question": "What was Tesla's GAAP Operating Income reported for 2025?",
+    "expected_answer_keywords": ["4.4", "4,400", "Operating Income"],
+    "target_route": "vector"
+  },
+  {
+    "id": 5,
+    "category": "single-hop",
+    "question": "Where is Microsoft Corporation headquartered?",
+    "expected_answer_keywords": ["Redmond", "Washington"],
+    "target_route": "graph"
+  },
+  {
+    "id": 6,
+    "category": "single-hop",
+    "question": "Who is the CEO of Apple Inc.?",
+    "expected_answer_keywords": ["Tim Cook", "CEO"],
+    "target_route": "graph"
+  },
+  {
+    "id": 7,
+    "category": "single-hop",
+    "question": "What is the primary regulatory agency overseeing Microsoft's SEC filings?",
+    "expected_answer_keywords": ["SEC", "Securities", "Exchange Commission"],
+    "target_route": "graph"
+  },
+  {
+    "id": 8,
+    "category": "single-hop",
+    "question": "What humanoid robot product is Tesla developing according to the update?",
+    "expected_answer_keywords": ["Optimus", "robot"],
+    "target_route": "vector"
+  },
+  {
+    "id": 9,
+    "category": "single-hop",
+    "question": "What autonomous vehicle vehicle model was announced for unsupervised ride-hailing?",
+    "expected_answer_keywords": ["Cybercab", "Robotaxi"],
+    "target_route": "vector"
+  },
+  {
+    "id": 10,
+    "category": "single-hop",
+    "question": "Is Beats Electronics a subsidiary of Apple?",
+    "expected_answer_keywords": ["Beats", "subsidiary", "Apple"],
+    "target_route": "graph"
+  },
+  {
+    "id": 11,
+    "category": "single-hop",
+    "question": "What company operates as a major hardware contract manufacturer supplying Apple?",
+    "expected_answer_keywords": ["Foxconn", "supplier"],
+    "target_route": "graph"
+  },
+  {
+    "id": 12,
+    "category": "single-hop",
+    "question": "What software suite powers Tesla's autonomous driver assistance system?",
+    "expected_answer_keywords": ["FSD", "Full Self-Driving", "Supervised"],
+    "target_route": "vector"
+  },
+  {
+    "id": 13,
+    "category": "two-hop",
+    "question": "Who is the Chief Executive of the company that produces the Cybercab and Optimus robot?",
+    "expected_answer_keywords": ["Elon Musk", "Tesla"],
+    "target_route": "graph"
+  },
+  {
+    "id": 14,
+    "category": "two-hop",
+    "question": "In what city is the corporate headquarters of the company led by Elon Musk?",
+    "expected_answer_keywords": ["Austin", "Texas", "Tesla"],
+    "target_route": "graph"
+  },
+  {
+    "id": 15,
+    "category": "two-hop",
+    "question": "Who leads the technology company that owns Beats Electronics as a subsidiary?",
+    "expected_answer_keywords": ["Tim Cook", "Apple"],
+    "target_route": "graph"
+  },
+  {
+    "id": 16,
+    "category": "two-hop",
+    "question": "Which hardware manufacturing partner supplies assembled devices to the company led by Tim Cook?",
+    "expected_answer_keywords": ["Foxconn", "Apple"],
+    "target_route": "graph"
+  },
+  {
+    "id": 17,
+    "category": "two-hop",
+    "question": "What regulatory body has jurisdiction over the company headquartered in Redmond, Washington?",
+    "expected_answer_keywords": ["SEC", "Securities", "Microsoft"],
+    "target_route": "graph"
+  },
+  {
+    "id": 18,
+    "category": "two-hop",
+    "question": "What vehicle products are manufactured by the company headquartered in Austin, Texas?",
+    "expected_answer_keywords": ["Model Y", "Model 3", "Cybercab", "Tesla"],
+    "target_route": "both"
+  },
+  {
+    "id": 19,
+    "category": "two-hop",
+    "question": "What is the reported full-year revenue of the company that produces the Model Y and Cybercab?",
+    "expected_answer_keywords": ["94,827", "94.8", "Tesla", "revenue"],
+    "target_route": "both"
+  },
+  {
+    "id": 20,
+    "category": "two-hop",
+    "question": "What operating income was generated in 2025 by the automotive company led by Elon Musk?",
+    "expected_answer_keywords": ["4.4", "4,400", "Tesla", "Operating Income"],
+    "target_route": "both"
+  },
+  {
+    "id": 21,
+    "category": "two-hop",
+    "question": "Which subsidiary brand acquired by Apple operates in the consumer audio hardware sector?",
+    "expected_answer_keywords": ["Beats", "Electronics", "Apple"],
+    "target_route": "graph"
+  },
+  {
+    "id": 22,
+    "category": "two-hop",
+    "question": "What energy storage hardware deployment milestones were reported by the maker of Megapack?",
+    "expected_answer_keywords": ["Megapack", "energy", "storage", "deployment"],
+    "target_route": "both"
+  },
+  {
+    "id": 23,
+    "category": "two-hop",
+    "question": "What capital expenditure metrics were reported for the producer of the Optimus robot?",
+    "expected_answer_keywords": ["Capital expenditures", "investments", "Tesla"],
+    "target_route": "both"
+  },
+  {
+    "id": 24,
+    "category": "two-hop",
+    "question": "Does Foxconn provide contract manufacturing to the parent company of Beats Electronics?",
+    "expected_answer_keywords": ["Foxconn", "Apple", "Beats"],
+    "target_route": "graph"
+  },
+  {
+    "id": 25,
+    "category": "three-hop",
+    "question": "Trace the relationship between Foxconn, the parent company of Beats Electronics, and its Chief Executive.",
+    "expected_answer_keywords": ["Foxconn", "Apple", "Tim Cook", "Beats"],
+    "target_route": "graph"
+  },
+  {
+    "id": 26,
+    "category": "three-hop",
+    "question": "What is the corporate hierarchy linking audio subsidiary Beats Electronics to its contract manufacturing supply chain via Apple?",
+    "expected_answer_keywords": ["Beats", "Apple", "Foxconn", "subsidiary"],
+    "target_route": "graph"
+  },
+  {
+    "id": 27,
+    "category": "three-hop",
+    "question": "How does the executive leadership of Tesla connect to its Austin headquarters and its autonomous Cybercab product line?",
+    "expected_answer_keywords": ["Elon Musk", "Tesla", "Austin", "Cybercab"],
+    "target_route": "graph"
+  },
+  {
+    "id": 28,
+    "category": "three-hop",
+    "question": "What financial revenue was generated by the corporation whose CEO oversees both the Optimus robot and Texas Gigafactory operations?",
+    "expected_answer_keywords": ["94,827", "94.8", "Elon Musk", "Tesla", "revenue"],
+    "target_route": "both"
+  },
+  {
+    "id": 29,
+    "category": "three-hop",
+    "question": "Can you trace the governance link from the Securities and Exchange Commission to Microsoft's corporate seat in Redmond?",
+    "expected_answer_keywords": ["SEC", "Microsoft", "Redmond", "REGULATED_BY"],
+    "target_route": "graph"
+  },
+  {
+    "id": 30,
+    "category": "three-hop",
+    "question": "If component supply disruptions occur at Foxconn, which subsidiary brands and executive leadership under Apple are exposed?",
+    "expected_answer_keywords": ["Foxconn", "Apple", "Beats", "Tim Cook"],
+    "target_route": "graph"
+  },
+  {
+    "id": 31,
+    "category": "three-hop",
+    "question": "What cash and investment reserves are held by the company whose Austin headquarters oversees the rollout of unsupervised FSD and Cybercab fleets?",
+    "expected_answer_keywords": ["Cash", "investments", "Tesla", "Austin", "FSD"],
+    "target_route": "both"
+  },
+  {
+    "id": 32,
+    "category": "three-hop",
+    "question": "How do regulatory filings required by the SEC connect to the GAAP operating income disclosures of technology companies in Redmond and Austin?",
+    "expected_answer_keywords": ["SEC", "Microsoft", "Tesla", "GAAP"],
+    "target_route": "both"
+  },
+  {
+    "id": 33,
+    "category": "aggregation",
+    "question": "List all major automotive and robotics products developed by Tesla mentioned in the update.",
+    "expected_answer_keywords": ["Model Y", "Model 3", "Cybercab", "Optimus", "Robotaxi"],
+    "target_route": "both"
+  },
+  {
+    "id": 34,
+    "category": "aggregation",
+    "question": "How many distinct companies and corporate subsidiaries are mapped across the entire database?",
+    "expected_answer_keywords": ["Tesla", "Apple", "Microsoft", "Beats", "Foxconn"],
+    "target_route": "graph"
+  },
+  {
+    "id": 35,
+    "category": "aggregation",
+    "question": "What is the breakdown of GAAP financial metrics reported in the Tesla financial update?",
+    "expected_answer_keywords": ["revenue", "Operating Income", "Net Income", "Free cash flow"],
+    "target_route": "both"
+  },
+  {
+    "id": 36,
+    "category": "aggregation",
+    "question": "Identify all Chief Executive Officers (CEOs) tracked across all companies in the system.",
+    "expected_answer_keywords": ["Elon Musk", "Tim Cook"],
+    "target_route": "graph"
+  },
+  {
+    "id": 37,
+    "category": "aggregation",
+    "question": "List all corporate headquarters locations mapped across all entities in the knowledge graph.",
+    "expected_answer_keywords": ["Austin", "Redmond"],
+    "target_route": "graph"
+  },
+  {
+    "id": 38,
+    "category": "aggregation",
+    "question": "What primary cash flow metrics including operating cash flow, capital expenditures, and free cash flow were disclosed?",
+    "expected_answer_keywords": ["operating activities", "Capital expenditures", "Free cash flow"],
+    "target_route": "vector"
+  },
+  {
+    "id": 39,
+    "category": "aggregation",
+    "question": "Summarize all supply chain relationships and subsidiary ownership structures recorded in the graph.",
+    "expected_answer_keywords": ["SUPPLIES_TO", "SUBSIDIARY_OF", "Foxconn", "Beats", "Apple"],
+    "target_route": "graph"
+  },
+  {
+    "id": 40,
+    "category": "aggregation",
+    "question": "What next-generation technology platforms including FSD, Cybercab, and Optimus are highlighted for future growth?",
+    "expected_answer_keywords": ["FSD", "Cybercab", "Optimus", "autonomous"],
+    "target_route": "vector"
+  },
+  {
+    "id": 41,
+    "category": "aggregation",
+    "question": "List all financial metrics that carry GAAP designation in the filing.",
+    "expected_answer_keywords": ["GAAP", "Operating Income", "Net income"],
+    "target_route": "both"
+  },
+  {
+    "id": 42,
+    "category": "aggregation",
+    "question": "What regulatory compliance bodies and standards govern the companies tracked in this database?",
+    "expected_answer_keywords": ["SEC", "Securities", "REGULATED_BY"],
+    "target_route": "graph"
+  },
+  {
+    "id": 43,
+    "category": "out-of-scope",
+    "question": "What is the current weather forecast for Tokyo tomorrow morning?",
+    "expected_answer_keywords": ["could not find", "not found", "document"],
+    "target_route": "vector"
+  },
+  {
+    "id": 44,
+    "category": "out-of-scope",
+    "question": "Who won the ICC Cricket World Cup final in 2023?",
+    "expected_answer_keywords": ["could not find", "not found", "document"],
+    "target_route": "vector"
+  },
+  {
+    "id": 45,
+    "category": "out-of-scope",
+    "question": "What is the recipe for preparing authentic Italian lasagna from scratch?",
+    "expected_answer_keywords": ["could not find", "not found", "document"],
+    "target_route": "vector"
+  },
+  {
+    "id": 46,
+    "category": "out-of-scope",
+    "question": "What are the cheat codes for Grand Theft Auto V on PlayStation 5?",
+    "expected_answer_keywords": ["could not find", "not found", "document"],
+    "target_route": "vector"
+  },
+  {
+    "id": 47,
+    "category": "out-of-scope",
+    "question": "Who directed the movie Oppenheimer released in 2023?",
+    "expected_answer_keywords": ["could not find", "not found", "document"],
+    "target_route": "vector"
+  },
+  {
+    "id": 48,
+    "category": "out-of-scope",
+    "question": "What is the distance between the Earth and the Moon in miles?",
+    "expected_answer_keywords": ["could not find", "not found", "document"],
+    "target_route": "vector"
+  },
+  {
+    "id": 49,
+    "category": "out-of-scope",
+    "question": "How do you solve a quadratic equation using the quadratic formula?",
+    "expected_answer_keywords": ["could not find", "not found", "document"],
+    "target_route": "vector"
+  },
+  {
+    "id": 50,
+    "category": "out-of-scope",
+    "question": "Who won the best actor award at the Academy Awards in 2024?",
+    "expected_answer_keywords": ["could not find", "not found", "document"],
+    "target_route": "vector"
+  }
+]
